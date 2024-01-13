@@ -663,12 +663,20 @@ video {
   --tw-bg-opacity: 0.5;
 }
 
-.bg-\[url\(\'build\/img\/background\.webp\'\)\]{
-  background-image: url('build/img/background.webp');
+.bg-\[url\(\'\/build\/img\/background\.webp\'\)\]{
+  background-image: url('/build/img/background.webp');
 }
 
 .bg-gradient-to-l{
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
+}
+
+.bg-cover{
+  background-size: cover;
+}
+
+.bg-no-repeat{
+  background-repeat: no-repeat;
 }
 
 .p-5{
@@ -745,8 +753,8 @@ video {
 body {
   /* background-color: #0d1b2a; */
   /* background-image: url(/build/img/background.webp); */
-  background-size: cover;
-  background-repeat: no-repeat;
+  /* background-size: cover;
+  background-repeat: no-repeat; */
   /* background-position: center; */
 }
 
