@@ -47,8 +47,9 @@ async function showWeather() {
     const feels = document.getElementById('feels');
     // tempDisplay = document.getElementById('temp');
     tempDisplay.innerHTML = `Temperature: ${result.temp}&deg;C`;
-    humidity.innerHTML = `Humidity: ${result.humidity}`;
+    humidity.innerHTML = `Humidity: ${result.humidity}%`;
     feels.innerHTML = `Feels like: ${result.feels_like}&deg;C`;
+    tempDisplay.classList.add('text-blue-500');
   } catch (error) {
     console.error(error);
   }

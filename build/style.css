@@ -659,24 +659,17 @@ video {
   background-color: rgb(79 74 69 / var(--tw-bg-opacity));
 }
 
+.bg-\[\#8ecae6\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(142 202 230 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-50{
   --tw-bg-opacity: 0.5;
 }
 
-.bg-\[url\(\'\/build\/img\/background\.webp\'\)\]{
-  background-image: url('/build/img/background.webp');
-}
-
 .bg-gradient-to-l{
   background-image: linear-gradient(to left, var(--tw-gradient-stops));
-}
-
-.bg-cover{
-  background-size: cover;
-}
-
-.bg-no-repeat{
-  background-repeat: no-repeat;
 }
 
 .p-5{
@@ -742,6 +735,16 @@ video {
 .text-\[\#e0e1dd\]{
   --tw-text-opacity: 1;
   color: rgb(224 225 221 / var(--tw-text-opacity));
+}
+
+.text-blue-800{
+  --tw-text-opacity: 1;
+  color: rgb(30 64 175 / var(--tw-text-opacity));
+}
+
+.text-blue-500{
+  --tw-text-opacity: 1;
+  color: rgb(59 130 246 / var(--tw-text-opacity));
 }
 
 .shadow-xl{
