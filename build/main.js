@@ -116,23 +116,25 @@ async function showExchangeRate() {
 showExchangeRate();
 
 async function quoteOfTheDay() {
-  const url = 'https://words-api5.p.rapidapi.com/api/v1/dict/quotes/today';
+  const url =
+    'https://quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com/quote?token=ipworld.info';
   const options = {
     method: 'GET',
     headers: {
       'X-RapidAPI-Key': '1bfa231b03msh5dbc2bef013530ap161573jsn7449e3ff3d21',
-      'X-RapidAPI-Host': 'words-api5.p.rapidapi.com',
+      'X-RapidAPI-Host':
+        'quotes-inspirational-quotes-motivational-quotes.p.rapidapi.com',
     },
   };
 
   try {
     const response = await fetch(url, options);
     const result = await response.json();
-    console.log(result.data);
+    console.log(result);
     // const randomShit = document.getElementById('randomShit');
     // const newQuote = result.data.quote;
     const newP = document.getElementById('newP');
-    newP.innerText = `"${result.data.quote}"\nby ${result.data.author}`;
+    newP.innerText = `"${result.text}"`;
     // randomShit.appendChild(newP);
     // newP.classList.add('text-5xl', 'text-white');
   } catch (error) {
