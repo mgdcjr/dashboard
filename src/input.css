@@ -4,27 +4,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .icons {
-  @apply h-24 w-24 md:h-32 md:w-32  hover:shadow-2xl cursor-pointer object-fill rounded-full hover:scale-125 duration-500;
-} */
-
-/* span {
-  @apply text-white;
-} */
-
-/* .weather {
-  background-image: url(/build/img/weather-bg.jpg);
-} */
-
-/* .weather {
-  background-image: linear-gradient(
-      rgba(226, 45, 54, 0.9),
-      rgba(108, 117, 238, 0.9)
-    ),
-    url(/build/img/weather-bg.jpg);
-  @apply hover:scale-150 duration-500;
-} */
-
 .nav-item {
-  @apply hover:text-blue-600 hover:bg-white border hover:text-bold bg-slate-500 w-full mx-0 text-white  cursor-pointer pl-5;
+  @apply hover:text-blue-600 hover:bg-white border bg-slate-500 w-full mx-0 text-white  cursor-pointer pl-5;
 }

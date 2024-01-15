@@ -8,7 +8,7 @@ module.exports = {
         body: ['Nunito'],
       },
       backgroundImage: {
-        background: "url('./build/img/background.webp')",
+        background: "url('./img/background.webp')",
       },
     },
   },
