@@ -2,89 +2,97 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="stylesheet" href="/build/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>My Dashboard</title>
+    <title>My homepage</title>
   </head>
-  <body class="font-body">
-    <div
-      class="container mx-auto max-w-full font-body h-screen overflow-hidden bg-[#8ecae6]">
+  <body class="overflow-hidden">
+    <!-- main container -->
+    <div class="container">
+      <!-- header -->
       <div
-        class="header flex flex-row justify-between px-20 border-black border-b w-full h-20 text-[#F6F1EE] bg-[#4F4A45] items-center font-body text-2xl">
-        <div class="greeting">
-          <h1>Hello Mario!</h1>
+        class="header w-screen flex flex-row justify-between items-center px-10 py-10 bg-slate-900">
+        <div class="hello">
+          <h1 class="text-5xl text-slate-300">Good day, Mario!</h1>
         </div>
-        <div class="calendar">
-          <p id="datetime"></p>
-        </div>
+        <div id="datetime" class="datetime text-slate-300 text-3xl"></div>
       </div>
-      <div
-        class="main-container h-full md:grid md:grid-flow-col md:grid-cols-2 place-content-start px-20 py-20 bg-gradient-to-l bg-opacity-50">
+      <div class="main-container grid grid-cols-10 grid-flow-col w-screen">
+        <!--sidebar-->
         <div
-          class="flex mb-10 md:w-full md:grid md:grid-flow-col md:grid-rows-3 md:place-content-center gap-5 text-3xl text-[#F6F1EE] md:items-start mx-auto">
-          <div class="yt">
-            <a href="https://www.youtube.com" target="_blank"
-              ><img src="./img/youtube.png" alt="" class="icons"
-            /></a>
-          </div>
-          <div class="fb peer">
-            <a href="https://facebook.com" target="_blank"
-              ><img src="./img/facebook.png" alt="" class="icons"
-            /></a>
-          </div>
-          <div class="ig peer">
-            <a href="https://www.instagram.com" target="_blank"
-              ><img src="./img/instagram.png" alt="" class="icons"
-            /></a>
-          </div>
-          <div class="ig peer">
-            <a href="https://www.nba.com" target="_blank"
-              ><img src="./img/nba.png" alt="" class="icons"
-            /></a>
-          </div>
-          <div class="ig peer">
-            <a href="https://www.netflix.com" target="_blank"
-              ><img src="./img/netflix.png" alt="" class="icons"
-            /></a>
-          </div>
-          <div class="ig peer">
-            <a href="https://www.disneyplus.com" target="_blank"
-              ><img src="./img/disney.jpg" alt="" class="icons"
-            /></a>
-          </div>
-          <div class="ig peer">
-            <a href="https://www.td.ca" target="_blank"
-              ><img src="./img/TD.png" alt="" class="icons"
-            /></a>
-          </div>
-          <div class="ig peer">
-            <a href="https://www.amazon.ca" target="_blank"
-              ><img src="./img/amazon.png" alt="" class="icons"
-            /></a>
-          </div>
-          <div class="ig peer">
+          class="side-bar border col-span-1 h-dvh overflow-hidden bg-[#3376BB]">
+          <h2 class="text-2xl">Favorites</h2>
+          <!-- navigation -->
+          <ul class="nav w-full">
+            <a href="https://www.youtube.com" target="_blank">
+              <li class="nav-item">Youtube</li></a
+            >
+
+            <a href="https://www.Facebook.com" target="_blank"
+              ><li class="nav-item">Facebook</li></a
+            >
+
+            <a href="https://www.Instagram.com" target="_blank"
+              ><li class="nav-item">Instagram</li></a
+            >
+
+            <a href="https://www.Amazon.ca" target="_blank"
+              ><li class="nav-item">Amazon</li></a
+            >
+
             <a
               href="https://www.whistler.ca/culture-recreation/facilities/meadow-park-sports-centre/"
               target="_blank"
-              ><img src="./img/gym.jfif" alt="" class="icons"
-            /></a>
+              ><li class="nav-item">Meadow Park</li></a
+            >
+
+            <a href="https://www.Netflix.com" target="_blank"
+              ><li class="nav-item">Netflix</li></a
+            >
+
+            <a href="https://www.nba.com" target="_blank"
+              ><li class="nav-item">NBA</li></a
+            >
+
+            <a
+              href="https://authentication.td.com/uap-ui/?consumer=easyweb&locale=en_CA#/uap/login"
+              target="_blank"
+              ><li class="nav-item">TD</li></a
+            >
+
+            <a href="https://www.disneyplus.com/home" target="_blank"
+              ><li class="nav-item">Disney+</li></a
+            >
+          </ul>
+        </div>
+        <!-- photo container -->
+        <div
+          class="slideshow border h-full col-span-8 bg-background bg-cover bg-no-repeat bg-center bg-fixed">
+          <div id="randomShit">
+            <!-- <img src="/build/img/random photos/" alt="" /> -->
+            <p id="newP" class="text-3xl text-white text-center"></p>
           </div>
         </div>
-
+        <!-- weather status -->
         <div
-          class="weather place-content-center md:w-2/3 p-5 font-body text-[#e0e1dd] rounded-xl shadow-xl mx-auto">
-          <h2 class="text-7xl text-center">Weather Information</h2>
-          <div
-            id="weather-container"
-            class="text-4xl pt-10 items-center font-bold">
-            <h2 id="cityName" class="weathertext py-3">City: Whistler, BC</h2>
-            <h2 id="temp" class="weathertext py-3">Temperature:</h2>
-            <h2 id="hum" class="weathertext py-3">Humidity:</h2>
-            <h2 id="feels" class="weathertextpy-3">Feels like:</h2>
+          class="weather-container h-full border col-span-1 bg-[#3376BB] text-white">
+          <h2 class="text-center text-2xl py-5">Whistler Weather</h2>
+          <hr />
+          <p id="temp" class="temp pl-5"></p>
+          <p id="hum" class="hum pl-5"></p>
+          <p id="feels" class="feels pl-5"></p>
+          <hr />
+          <h2 class="text-center text-2xl py-5">Philippines Info</h2>
+          <img src="/build/img/philippines.jpg" alt="" class="mb-5" />
+          <div id="phInfo" class="text-center">
+            <p id="phDate" class="pl-5"></p>
+            <p id="phDay" class="pl-5"></p>
+            <p id="phTime" class="pl-5"></p>
           </div>
+          <hr />
         </div>
       </div>
     </div>
-    <script src="main.js"></script>
+    <script src="/build/main.js"></script>
   </body>
 </html>
